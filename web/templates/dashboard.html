@@ -1,0 +1,30 @@
+!DOCUMENT.HTML
+<html>
+<head>
+<title>Autopatch Logs Dashboard</title>
+<style>
+	body{font-family:Arial; background: #2f2f2; padding:20px;}
+	h1 {color: #333;}
+	.log-box{
+		background:#fff;
+		border: 1px solid #ccc;
+		padding: 15px;
+		margin-bottom: 20px;
+		box-shadow: 2px 2px 6pz pink;	
+}
+</style>
+</head>
+<body>
+<h1>Autopatch System Logs</h1>
+
+{% for filename, content in log %}
+
+	<div class="log-box">
+	<h3>{{	filename }}</h3>
+	<pre>{{ content }}</pre>
+	</div>
+
+{% endfor %} 
+
+</body>
+</html>
